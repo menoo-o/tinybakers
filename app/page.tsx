@@ -1,12 +1,9 @@
-import React from 'react'
+import BakeryHero from "@/components/bakery-hero"
 
-function Homepage() {
+export default function Home() {
   return (
-    <div>
-      tiny bakery
-      
-    </div>
+    <main className="min-h-screen bg-navy-900">
+      <BakeryHero />
+    </main>
   )
 }
-
-export default Homepage
