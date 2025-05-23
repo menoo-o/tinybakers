@@ -6,6 +6,8 @@
   background-color: #00242F;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   font-family: var(--font-avenir), monospace;
+  overflow: hidden; /* optional */
+
 }
 
 .logo img {
@@ -37,3 +39,12 @@
   transition: color 0.3s ease;
 }
 
+@media only screen and (max-width: 600px) {
+  .nav-links {
+    display: none; /* Hide nav links on small screens */
+  }
+
+  .social-icons{
+    display: none; /* Hide social icons on small screens */
+  }
+}

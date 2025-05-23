@@ -25,6 +25,7 @@
 body {
   background: var(--foreground);
   color: var(--foreground);
+  
   font-family: "Encode Sans Semi Condensed", sans-serif; /* instead of "?" */
   font-weight: 400; /* Regular as base */
 }

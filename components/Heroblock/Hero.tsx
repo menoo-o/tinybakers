@@ -28,6 +28,8 @@ export default function BakeryHero() {
       <div className="signboard">
         <OpenClosedSign isInitialized={isInitialized} />
       </div>
+
+      
     
   {/* other hero content */}
 </div>

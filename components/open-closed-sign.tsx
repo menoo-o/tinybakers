@@ -73,7 +73,7 @@ export default function OpenClosedSign({ isInitialized }: OpenClosedSignProps) {
           gsap.to(signRef.current, {
             rotation: 2,
             duration: 2,
-            ease: "sine.inOut",
+            ease: "sine.out",
             repeat: -1,
             yoyo: true,
           })
