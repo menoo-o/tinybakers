@@ -173,7 +173,7 @@ export default function OpenClosedSign({ isInitialized }: OpenClosedSignProps) {
           <div
             ref={textRef}
             className={`font-medium text-lg text-center px-2`}
-            style={{ color: isOpen ? "#f0f8ff" : "#09CAF4" }}
+            style={{ color: isOpen ? "#09CAF4" : "#09CAF4" }}
           >
             {isOpen ? "Open" : "Sorry We're Closed"}
           </div>

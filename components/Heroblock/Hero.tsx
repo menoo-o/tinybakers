@@ -4,7 +4,6 @@ import { useEffect, useState } from "react"
 import gsap from "gsap"
 import OpenClosedSign from "@/components/open-closed-sign"
 import './hero.css'
-import PopBlock from "../popup/Popupblock"
 
 export default function BakeryHero() {
 
@@ -26,10 +25,10 @@ export default function BakeryHero() {
 
   return (
     <div className="hero">
-      {/* <div className="signboard">
+      <div className="signboard">
         <OpenClosedSign isInitialized={isInitialized} />
-      </div> */}
-      <PopBlock />
+      </div>
+    
   {/* other hero content */}
 </div>
 
