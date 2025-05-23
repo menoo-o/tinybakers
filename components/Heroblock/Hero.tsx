@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import gsap from "gsap"
 import OpenClosedSign from "@/components/open-closed-sign"
 import './hero.css'
+import Textanimate from "@/components/text/Textsection"
 
 export default function BakeryHero() {
 
@@ -29,9 +30,11 @@ export default function BakeryHero() {
         <OpenClosedSign isInitialized={isInitialized} />
       </div>
 
-      
+
     
   {/* other hero content */}
+    <Textanimate />
+
 </div>
 
   )
