@@ -1,4 +1,4 @@
-import BakeryHero from "@/components/bakery-hero"
+import BakeryHero from "@/components/Heroblock/Hero"
 
 export default function Home() {
   return (

@@ -1,0 +1,9 @@
+.hero {
+  position: relative; /* ensures child positioning works */
+}
+
+.signboard {
+  margin-top: -20px; /* adjust this based on visual spacing */
+  transform: translateX(-650px); /* shift slightly to match logo alignment */
+  z-index: 1;
+}

@@ -164,14 +164,16 @@ export default function OpenClosedSign({ isInitialized }: OpenClosedSignProps) {
       <div ref={threadRef} className="w-0.5 h-12 bg-gray-400 absolute top-0"></div>
 
       {/* Sign */}
-      <div ref={signRef} className="absolute top-12 transform-gpu" style={{ transformStyle: "preserve-3d" }}>
+      <div ref={signRef} className="absolute top-12 transform-gpu" style={{ transformStyle: "preserve-3d" }} >
         <div
           ref={signBoxRef}
-          className="bg-navy-800 border border-blue-300 rounded-md shadow-md py-3 px-6 transition-shadow duration-300"
+          className="border border-blue-300 rounded-md shadow-md py-3 px-6 transition-shadow duration-300"
+          style={{ background: "#F6FCFF" }} // ✅ note the quotes
         >
           <div
             ref={textRef}
-            className={`font-medium text-lg ${isOpen ? "text-blue-100" : "text-red-300"} text-center px-2`}
+            className={`font-medium text-lg text-center px-2`}
+            style={{ color: isOpen ? "#f0f8ff" : "#09CAF4" }}
           >
             {isOpen ? "Open" : "Sorry We're Closed"}
           </div>
