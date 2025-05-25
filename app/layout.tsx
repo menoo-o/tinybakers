@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import DesktopNavbar from "@/components/Navbar/DesktopNavbar";
 
-
+import Marquee from "@/components/Marquee";
 
 
 
@@ -23,6 +23,7 @@ export default function RootLayout({
         className={` antialiased`} >
         
         <DesktopNavbar />
+        <Marquee />
         {/* Main content */}
         {children}
       </body>

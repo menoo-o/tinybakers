@@ -17,14 +17,31 @@ export default function OpenClosedSign({ isInitialized }: OpenClosedSignProps) {
   useEffect(() => {
     // Check if the bakery is open based on current time
     const checkOpenStatus = () => {
-      const now = new Date()
-      const hours = now.getHours()
+      const options = { timeZone: 'Europe/London' };
+      const londonTime = new Date().toLocaleString('en-US', options);
+      const now = new Date(londonTime);
+      const day = now.getDay(); // 0 (Sunday) to 6 (Saturday)
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const currentTime = hours * 100 + minutes; // Convert to HHMM format as number (e.g., 1430 for 2:30 PM)
 
-      // Open from 7am to 5pm (7:00 to 17:00)
-      const isShopOpen = hours >= 7 && hours < 17
-      setIsOpen(isShopOpen)
-    }
+      let isShopOpen = false;
 
+      // Sunday (0) , Monday (1) , Tuesday (2) - closed
+      if (day === 0 || day === 1 || day ===2) {
+        isShopOpen = false;
+      } 
+      // Wednesday to Friday (3-5) - 7:30am to 4:30pm
+      else if (day >= 3 && day <= 5) {
+        isShopOpen = currentTime >= 730 && currentTime < 1630;
+      }
+      // Saturday (6) - 8:30am to 3:00pm
+      else if (day === 6) {
+        isShopOpen = currentTime >= 830 && currentTime < 1500;
+      }
+
+      setIsOpen(isShopOpen);
+    };
     // Check immediately and set up interval to check every minute
     checkOpenStatus()
     const intervalId = setInterval(checkOpenStatus, 60000)
