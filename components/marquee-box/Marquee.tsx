@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles.css"; // Import your CSS styles for the marquee
 
 const Marquee = () => {
   return (
@@ -6,7 +7,7 @@ const Marquee = () => {
       <div className="marquee-track">
         <span>We will be closed on Sunday, Monday & Tuesday</span>
         <span>Missed the weekend special honey bee croissants?</span>
-        <span>Dont worry — tiny bakers have a surprise waiting just for you! 🎁</span>
+        <span>Tiny Bakers have a surprise waiting just for you!</span>
         <span>See you on Wednesday</span>
       </div>
     </div>

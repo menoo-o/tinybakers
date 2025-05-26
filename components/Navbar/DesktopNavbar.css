@@ -1,8 +1,8 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between ;
   align-items: center;
-  padding: 20px 25px;
+  padding: 20px 40px;
   background-color: #00242F;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   font-family: var(--font-avenir), monospace;
@@ -17,6 +17,8 @@
 .nav-links {
   display: flex;
   gap: 30px;
+  flex: 1;
+  justify-content: center;
 }
 
 .nav-links a {
@@ -32,6 +34,7 @@
 .social-icons {
   display: flex;
   gap: 20px;
+  flex-shrink: 0;
 }
 
 .social-icons a {
@@ -39,7 +42,30 @@
   transition: color 0.3s ease;
 }
 
+.mobile-menu-icon{
+  display: none;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+
 @media only screen and (max-width: 600px) {
+
+  .navbar {
+  padding: 10px 20px;
+  height: 80px;
+  margin: 0;
+}
+
+.mobile-menu-icon{
+  display: block; /* Show mobile menu icon on small screens */
+  color: #F6FCFF;
+  opacity: 0.85;
+}
+
+
   .nav-links {
     display: none; /* Hide nav links on small screens */
   }

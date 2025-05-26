@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import gsap from "gsap"
 import OpenClosedSign from "@/components/open-closed-sign"
 import './hero.css'
-import Textanimate from "@/components/text/Textsection"
+
 
 export default function BakeryHero() {
 
@@ -33,7 +33,7 @@ export default function BakeryHero() {
 
     
   {/* other hero content */}
-    <Textanimate />
+    {/* <Textanimate /> */}
 
 </div>
 

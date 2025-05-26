@@ -4,6 +4,7 @@ import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
 import Image from 'next/image';    
 import Link from 'next/link';
 import './DesktopNavbar.css'
+import { AlignJustify } from 'lucide-react';
 
 function DesktopNavbar() {
   return (
@@ -37,6 +38,12 @@ function DesktopNavbar() {
             <FaTwitter size={26} />
             </Link>
         </div>
+
+        <div className='mobile-menu'>
+            <AlignJustify size={30} className='mobile-menu-icon' />
+        </div>
+
+        
     </nav>
 
 

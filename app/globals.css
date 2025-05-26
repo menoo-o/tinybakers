@@ -22,85 +22,17 @@
   }
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background: var(--foreground);
+  background: var(--signboard);
   color: var(--foreground);
   
   font-family: "Encode Sans Semi Condensed", sans-serif; /* instead of "?" */
   font-weight: 400; /* Regular as base */
 }
 
-
-.marquee-wrapper {
-  width: 100%;
-  background-color: #09CAFA;
-  color: #F6FCFF;
-  font-family: "Encode Sans Semi Condensed", sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
-  overflow: hidden;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: slideMessages 20s steps(4) infinite;
-}
-
-.marquee-track span {
-  flex: 0 0 100vw; /* take full screen width */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-  padding: 0 1rem;
-}
-
-
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: slideMessages 20s linear infinite; /* 8s total (2s per message) */
-}
-
-@keyframes slideMessages {
-  0% {
-    transform: translateX(0);
-  }
-  /* Show first message */
-  12.5% {
-    transform: translateX(0);
-  }
-  /* Slide to second message */
-  25% {
-    transform: translateX(-100vw);
-  }
-  /* Show second message */
-  37.5% {
-    transform: translateX(-100vw);
-  }
-  /* Slide to third message */
-  50% {
-    transform: translateX(-200vw);
-  }
-  /* Show third message */
-  62.5% {
-    transform: translateX(-200vw);
-  }
-  /* Slide to fourth message */
-  75% {
-    transform: translateX(-300vw);
-  }
-  /* Show fourth message */
-  87.5% {
-    transform: translateX(-300vw);
-  }
-  /* Slide back to start */
-  100% {
-    transform: translateX(-400vw);
-  }
-}

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import DesktopNavbar from "@/components/Navbar/DesktopNavbar";
 
-import Marquee from "@/components/Marquee";
+import Marquee from "@/components/marquee-box/Marquee";
 
 
 

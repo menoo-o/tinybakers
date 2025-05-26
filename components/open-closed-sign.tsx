@@ -117,7 +117,7 @@ export default function OpenClosedSign({ isInitialized }: OpenClosedSignProps) {
             textRef.current.innerHTML = isOpen ? "Open" : "Sorry We're Closed"
             textRef.current.className = `font-medium text-lg ${
               isOpen ? "text-blue-100" : "text-red-300"
-            } text-center px-2`
+            } text-center px-4 py-2`
           }
         },
       })
@@ -176,26 +176,32 @@ export default function OpenClosedSign({ isInitialized }: OpenClosedSignProps) {
   }, [isOpen, isInitialized])
 
   return (
-    <div className="relative h-32 flex items-center justify-center">
-      {/* Single Thread */}
-      <div ref={threadRef} className="w-0.5 h-12 bg-gray-400 absolute top-0"></div>
+  <div className="relative h-32 flex items-center justify-center">
+    {/* Single Thread */}
+    <div ref={threadRef} className="w-0.5 h-12 bg-gray-400 absolute top-0"></div>
 
-      {/* Sign */}
-      <div ref={signRef} className="absolute top-12 transform-gpu" style={{ transformStyle: "preserve-3d" }} >
+    {/* Sign */}
+    <div
+        ref={signRef}
+        className="absolute top-12 transform-gpu"
+        style={{ transformStyle: "preserve-3d" }}
+      >
         <div
           ref={signBoxRef}
-          className="border border-blue-300 rounded-md shadow-md py-3 px-6 transition-shadow duration-300"
-          style={{ background: "#F6FCFF" }} // ✅ note the quotes
+          className="border border-blue-300 rounded-md shadow-md bg-[#F6FCFF] px-6 py-4 min-w-[200px] text-center"
         >
-          <div
-            ref={textRef}
-            className={`font-medium text-lg text-center px-2`}
-            style={{ color: isOpen ? "#09CAF4" : "#09CAF4" }}
-          >
-            {isOpen ? "Open" : "Sorry We're Closed"}
-          </div>
-        </div>
+        <div
+          ref={textRef}
+          className="font-medium text-lg text-center px-4 py-2"
+          style={{ color: isOpen ? "#09CAF4" : "#09CAF4" }}
+        >
+      {isOpen ? "Open" : "Sorry We're Closed"}
       </div>
     </div>
-  )
+  </div>
+</div>
+)
 }
+
+
+// className={`font-medium text-lg text-center px-2`}
