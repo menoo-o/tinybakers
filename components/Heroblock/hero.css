@@ -1,10 +1,9 @@
 .hero {
   position: relative; /* ensures child positioning works */
-  margin-top: 20px;
+  margin-top: 0px;
   background-color: #F6FCFF;
-  min-height: 88vh;
+  min-height: 90vh;
  
-
 }
 
 .signboard {
@@ -13,9 +12,33 @@
   z-index: 1;
 }
 
+.hero-content {
+  position: relative;
+  padding: 20px;
+  padding-top: 0;
+}
+
 
 @media only screen and (max-width: 600px) {
   .signboard {
     display: none;
   }
+}
+
+
+.hero {
+  position: relative; /* establishes stacking context */
+}
+
+.signboard {
+  position: absolute;
+  top: -10px; /* adjust as needed */
+  left: 8%;
+  transform: translateX(-30%);
+  z-index: 30; /* make sure this is higher than .hero-content's background */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10; /* behind the signboard */
 }
