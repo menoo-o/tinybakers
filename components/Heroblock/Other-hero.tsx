@@ -19,7 +19,7 @@ export default function TinyBakersHero() {
               <h1 className="hero-title">Artisan Breads, Pastries & More</h1>
        
               <p className="hero-description">
-                Experience the finest handcrafted breads and pastries, baked fresh daily with love and traditional
+                Experience the finest handcrafted breads and pastries, baked fresh with love and traditional
                 techniques.
               </p>
             </div>
